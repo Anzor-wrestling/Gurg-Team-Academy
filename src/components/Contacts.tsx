@@ -113,7 +113,7 @@ const Contacts = ({ selectedBranch, onBranchChange }: ContactsProps) => {
               <h3 className="font-heading text-lg uppercase text-foreground mb-4">Социальные сети</h3>
               <div className="flex gap-4">
                 <motion.a
-                  href="https://wa.me/87073843775"
+                  href="https://wa.me/77073843775"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-social"

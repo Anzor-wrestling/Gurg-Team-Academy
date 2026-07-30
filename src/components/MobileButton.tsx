@@ -4,7 +4,7 @@ import { Send } from "lucide-react";
 const MobileButton = () => {
   return (
     <motion.a
-      href="https://wa.me/87073843775"
+      href="https://wa.me/77073843775"
       target="_blank"
       rel="noopener noreferrer"
       className="fixed bottom-6 right-6 z-50 md:hidden btn-hero flex items-center gap-2 px-6 py-4"

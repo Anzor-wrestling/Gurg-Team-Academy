@@ -130,7 +130,7 @@ const Team = () => {
             Это можешь быть и ты! Начни свою трансформацию прямо сейчас.
           </p>
           <a
-          href="https://wa.me/87073843775?text=Здравствуйте!%20Хочу%20записаться%20на%20тренировку."
+          href="https://wa.me/77073843775?text=Здравствуйте!%20Хочу%20записаться%20на%20тренировку."
             target="_blank"
                rel="noopener noreferrer"
   className="inline-block px-8 py-3 bg-primary text-primary-foreground font-heading uppercase tracking-wider rounded hover:bg-primary/90 transition-colors"

@@ -16,7 +16,7 @@ const Footer = () => {
           {/* Social */}
           <div className="flex items-center gap-4">
             <a
-              href="https://wa.me/87073843775"
+              href="https://wa.me/77073843775"
               target="_blank"
               rel="noopener noreferrer"
               className="text-muted-foreground hover:text-primary transition-colors"

@@ -68,7 +68,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <a
-            href="https://wa.me/87073843775"
+            href="https://wa.me/77073843775"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-social"
