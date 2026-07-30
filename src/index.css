@@ -1,0 +1,151 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Martial Arts Coach - Dark Aggressive Design System */
+
+@layer base {
+  :root {
+    /* Dark theme by default - aggressive martial arts aesthetic */
+    --background: 0 0% 5%;
+    --foreground: 0 0% 98%;
+
+    --card: 0 0% 8%;
+    --card-foreground: 0 0% 98%;
+
+    --popover: 0 0% 8%;
+    --popover-foreground: 0 0% 98%;
+
+    /* Red accent - aggressive, powerful */
+    --primary: 0 85% 50%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Gold accent - achievement, prestige */
+    --secondary: 45 90% 55%;
+    --secondary-foreground: 0 0% 5%;
+
+    --muted: 0 0% 15%;
+    --muted-foreground: 0 0% 65%;
+
+    --accent: 0 0% 12%;
+    --accent-foreground: 0 0% 98%;
+
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+
+    --border: 0 0% 20%;
+    --input: 0 0% 15%;
+    --ring: 0 85% 50%;
+
+    --radius: 0.25rem;
+
+    /* Custom properties */
+    --gradient-hero: linear-gradient(135deg, hsl(0 0% 0% / 0.9) 0%, hsl(0 0% 5% / 0.8) 100%);
+    --gradient-red: linear-gradient(135deg, hsl(0 85% 50%) 0%, hsl(0 70% 35%) 100%);
+    --gradient-gold: linear-gradient(135deg, hsl(45 90% 55%) 0%, hsl(35 80% 45%) 100%);
+    --shadow-glow-red: 0 0 30px hsl(0 85% 50% / 0.4);
+    --shadow-glow-gold: 0 0 30px hsl(45 90% 55% / 0.4);
+    --shadow-card: 0 10px 40px hsl(0 0% 0% / 0.5);
+
+    /* Fonts */
+    --font-heading: 'Oswald', sans-serif;
+    --font-body: 'Inter', sans-serif;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-body);
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-heading);
+    @apply font-bold tracking-wide uppercase;
+  }
+}
+
+@layer components {
+  .btn-hero {
+    @apply inline-flex items-center justify-center px-8 py-4 text-lg font-semibold uppercase tracking-wider transition-all duration-300;
+    background: var(--gradient-red);
+    @apply text-white;
+  }
+
+  .btn-hero:hover {
+    box-shadow: var(--shadow-glow-red);
+    @apply scale-105;
+  }
+
+  .btn-social {
+    @apply inline-flex items-center justify-center w-12 h-12 rounded-none transition-all duration-300;
+    @apply bg-muted text-foreground border border-border;
+  }
+
+  .btn-social:hover {
+    @apply bg-primary text-primary-foreground;
+    box-shadow: var(--shadow-glow-red);
+  }
+
+  .section-heading {
+    @apply text-4xl md:text-5xl lg:text-6xl font-bold uppercase tracking-wider mb-4;
+  }
+
+  .section-subheading {
+    @apply text-muted-foreground text-lg md:text-xl max-w-2xl;
+  }
+
+  .card-stat {
+    @apply bg-card border border-border p-8 text-center transition-all duration-300;
+  }
+
+  .card-stat:hover {
+    @apply border-primary;
+    box-shadow: var(--shadow-glow-red);
+  }
+
+  .card-team {
+    @apply bg-card overflow-hidden transition-all duration-500;
+  }
+
+  .card-team:hover {
+    @apply scale-105;
+    box-shadow: var(--shadow-card);
+  }
+
+  .schedule-row {
+    @apply border-b border-border py-4 transition-colors duration-300;
+  }
+
+  .schedule-row:hover {
+    @apply bg-muted;
+  }
+
+  .gradient-text-red {
+    background: var(--gradient-red);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+
+  .gradient-text-gold {
+    background: var(--gradient-gold);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
