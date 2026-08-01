@@ -14,7 +14,7 @@ const MobileButton = () => {
       whileTap={{ scale: 0.95 }}
     >
       <FaWhatsapp size={20} />
-      <span>Написать в WhatsApp</span>
+      <span>Написать</span>
     </motion.a>
   );
 };
