@@ -94,7 +94,7 @@ const Contacts = ({ selectedBranch, onBranchChange }: ContactsProps) => {
 
             <div className="flex items-start gap-4">
               <motion.a
-                href="tel:+79001234567"
+               
                 
                 className="btn-social shrink-0"
                 whileHover={{ scale: 1.1, y: -2 }}
@@ -103,7 +103,7 @@ const Contacts = ({ selectedBranch, onBranchChange }: ContactsProps) => {
               </motion.a>
               <div>
                 <h3 className="font-heading text-lg uppercase text-foreground mb-1">Телефон</h3>
-                <a href="tel:+79001234567" className="text-primary text-lg hover:underline">
+                <a >
                   +7 (707) 384-37-75
                   <br />
                   +7 (700) 900-04-98
