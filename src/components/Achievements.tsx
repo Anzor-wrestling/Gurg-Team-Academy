@@ -3,10 +3,10 @@ import { useRef, useEffect, useState } from "react";
 import { Calendar, Users, Medal, Trophy } from "lucide-react";
 
 const stats = [
-  { icon: Calendar, value: 10, label: "Лет опыта", suffix: "+" },
-  { icon: Users, value: 500, label: "Учеников", suffix: "+" },
-  { icon: Medal, value: 800, label: "Медалей", suffix: "" },
-  { icon: Trophy, value: 50, label: "Турниров", suffix: "+" },
+  { icon: Calendar, value: 11, label: "Лет опыта", suffix: "+" },
+  { icon: Users, value: 1000, label: "Учеников", suffix: "+" },
+  { icon: Medal, value: 3000, label: "Медалей", suffix: "+" },
+  { icon: Trophy, value: 480, label: "Турниров", suffix: "+" },
 ];
 
 const CounterAnimation = ({ value, suffix, shouldStart }: { value: number; suffix: string; shouldStart: boolean }) => {

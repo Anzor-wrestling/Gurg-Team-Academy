@@ -1,4 +1,5 @@
-import { Send, Instagram, Phone } from "lucide-react";
+import { Instagram, Phone } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const Footer = () => {
   return (
@@ -16,14 +17,14 @@ const Footer = () => {
           {/* Social */}
           <div className="flex items-center gap-4">
             <a
-              href="https://wa.me/77073843775"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-muted-foreground hover:text-primary transition-colors"
-              aria-label="WhatsApp"
-            >
-              <Send size={20} />
-            </a>
+  href="https://wa.me/77073843775"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-social"
+  aria-label="WhatsApp"
+>
+  <FaWhatsapp size={24} />
+</a>
             <a
               href="https://instagram.com/gurg_team"
               target="_blank"

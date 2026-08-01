@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { Send } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 
 const MobileButton = () => {
   return (
@@ -13,8 +13,8 @@ const MobileButton = () => {
       transition={{ delay: 1, duration: 0.5 }}
       whileTap={{ scale: 0.95 }}
     >
-      <Send size={20} />
-      <span>Написать</span>
+      <FaWhatsapp size={20} />
+      <span>Написать в WhatsApp</span>
     </motion.a>
   );
 };

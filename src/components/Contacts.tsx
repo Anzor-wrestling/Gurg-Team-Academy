@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { MapPin, Phone, Send, Instagram, Clock } from "lucide-react";
+import { MapPin, Phone, Instagram, Clock } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import { getBranches } from "./Schedule";
 
 interface ContactsProps {
@@ -86,8 +87,7 @@ const Contacts = ({ selectedBranch, onBranchChange }: ContactsProps) => {
               <div>
                 <h3 className="font-heading text-lg uppercase text-foreground mb-1">Время работы</h3>
                 <p className="text-muted-foreground">
-                  Пн-Пт: 17:00 - 21:00<br />
-                  Сб: 10:00 - 16:00
+                  Пн-Сб: 09:30 - 21:30<br />
                 </p>
               </div>
             </div>
@@ -95,6 +95,7 @@ const Contacts = ({ selectedBranch, onBranchChange }: ContactsProps) => {
             <div className="flex items-start gap-4">
               <motion.a
                 href="tel:+79001234567"
+                
                 className="btn-social shrink-0"
                 whileHover={{ scale: 1.1, y: -2 }}
               >
@@ -104,6 +105,8 @@ const Contacts = ({ selectedBranch, onBranchChange }: ContactsProps) => {
                 <h3 className="font-heading text-lg uppercase text-foreground mb-1">Телефон</h3>
                 <a href="tel:+79001234567" className="text-primary text-lg hover:underline">
                   +7 (707) 384-37-75
+                  <br />
+                  +7 (700) 900-04-98
                 </a>
               </div>
             </div>
@@ -113,14 +116,15 @@ const Contacts = ({ selectedBranch, onBranchChange }: ContactsProps) => {
               <h3 className="font-heading text-lg uppercase text-foreground mb-4">Социальные сети</h3>
               <div className="flex gap-4">
                 <motion.a
-                  href="https://wa.me/77073843775"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="btn-social"
-                  whileHover={{ scale: 1.1, y: -2 }}
-                >
-                  <Send size={20} />
-                </motion.a>
+  href="https://wa.me/77073843775"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-social"
+  whileHover={{ scale: 1.1, y: -2 }}
+  aria-label="WhatsApp"
+>
+  <FaWhatsapp size={20} />
+</motion.a>
                 <motion.a
                   href="https://instagram.com/gurg_team"
                   target="_blank"

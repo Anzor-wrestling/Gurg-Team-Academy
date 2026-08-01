@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { Send, Instagram, Phone } from "lucide-react";
+import { Instagram, Phone } from "lucide-react";
+import { FaWhatsapp } from "react-icons/fa";
 import heroBg from "@/assets/hero-bg.jpg";
 
 const Hero = () => {
@@ -68,14 +69,14 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <a
-            href="https://wa.me/77073843775"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="btn-social"
-            aria-label="Telegram"
-          >
-            <Send size={24} />
-          </a>
+  href="https://wa.me/77073843775"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="btn-social"
+  aria-label="WhatsApp"
+>
+  <FaWhatsapp size={24} />
+</a>
           <a
             href="https://instagram.com/gurg_team"
             target="_blank"
