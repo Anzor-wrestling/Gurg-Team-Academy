@@ -93,14 +93,6 @@ const Contacts = ({ selectedBranch, onBranchChange }: ContactsProps) => {
             </div>
 
             <div className="flex items-start gap-4">
-              <motion.a
-               
-                
-                className="btn-social shrink-0"
-                whileHover={{ scale: 1.1, y: -2 }}
-              >
-                <Phone size={20} />
-              </motion.a>
               <div>
                 <h3 className="font-heading text-lg uppercase text-foreground mb-1">Телефон</h3>
                 <a >
