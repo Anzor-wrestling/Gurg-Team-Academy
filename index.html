@@ -18,7 +18,7 @@
 
     <meta
       name="description"
-      content="Gurg Team Academy (Гург Тим) — академия единоборств в Астане. Тренировки по ММА, боксу, грэпплингу, самбо и самообороне для детей, подростков и взрослых."
+      content="Gurg Team Academy (Гург Тим) — академия единоборств в Астане. Тренер — чемпион мира Arashi MMA 2026. ММА, бокс, грэпплинг, самбо и самооборона для детей и взрослых."
     />
 
     <meta
@@ -50,8 +50,11 @@
     />
     <meta
       property="og:image"
-      content="https://gurgteam.asia/favicon.jpg"
+      content="https://gurgteam.asia/og-image.jpg"
     />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="630" />
+    <meta property="og:image:alt" content="Тренер Анзор Раджабов и ученики Gurg Team Academy" />
 
     <!-- Twitter -->
     <meta name="twitter:card" content="summary_large_image" />
@@ -65,29 +68,71 @@
     />
     <meta
       name="twitter:image"
-      content="https://gurgteam.asia/favicon.jpg"
+      content="https://gurgteam.asia/og-image.jpg"
     />
 
     <!-- Schema.org -->
     <script type="application/ld+json">
       {
         "@context": "https://schema.org",
-        "@type": "SportsActivityLocation",
-        "name": "Gurg Team Academy",
-        "alternateName": "Гург Тим",
-        "url": "https://gurgteam.asia",
-        "logo": "https://gurgteam.asia/favicon.jpg",
-        "address": {
-          "@type": "PostalAddress",
-          "addressLocality": "Астана",
-          "addressCountry": "KZ"
-        },
-        "sport": [
-          "MMA",
-          "Boxing",
-          "Grappling",
-          "Sambo",
-          "Self Defense"
+        "@graph": [
+          {
+            "@type": "SportsOrganization",
+            "@id": "https://gurgteam.asia/#org",
+            "name": "Gurg Team Academy",
+            "alternateName": "Гург Тим",
+            "url": "https://gurgteam.asia/",
+            "logo": "https://gurgteam.asia/favicon.jpg",
+            "image": "https://gurgteam.asia/og-image.jpg",
+            "telephone": "+77073843775",
+            "sameAs": ["https://instagram.com/gurg_team"],
+            "founder": {
+              "@type": "Person",
+              "name": "Раджабов Анзор Имомалиевич",
+              "jobTitle": "Главный тренер, чемпион мира Arashi MMA 2026"
+            },
+            "sport": ["MMA", "Grappling", "Boxing", "Sambo", "Self Defense"]
+          },
+          {
+            "@type": "SportsActivityLocation",
+            "name": "Gurg Team Academy — Кенесары",
+            "parentOrganization": { "@id": "https://gurgteam.asia/#org" },
+            "url": "https://gurgteam.asia/",
+            "image": "https://gurgteam.asia/og-image.jpg",
+            "telephone": "+77073843775",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "ул. Кенесары, 47",
+              "addressLocality": "Астана",
+              "addressCountry": "KZ"
+            },
+            "openingHoursSpecification": [{
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Tuesday", "Thursday", "Saturday"],
+              "opens": "09:30",
+              "closes": "21:30"
+            }]
+          },
+          {
+            "@type": "SportsActivityLocation",
+            "name": "Gurg Team Academy — Косшыгулулы",
+            "parentOrganization": { "@id": "https://gurgteam.asia/#org" },
+            "url": "https://gurgteam.asia/",
+            "image": "https://gurgteam.asia/og-image.jpg",
+            "telephone": "+77073843775",
+            "address": {
+              "@type": "PostalAddress",
+              "streetAddress": "ул. Косшыгулулы, 11/3",
+              "addressLocality": "Астана",
+              "addressCountry": "KZ"
+            },
+            "openingHoursSpecification": [{
+              "@type": "OpeningHoursSpecification",
+              "dayOfWeek": ["Monday", "Wednesday", "Friday"],
+              "opens": "09:30",
+              "closes": "21:30"
+            }]
+          }
         ]
       }
     </script>
@@ -97,12 +142,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&display=swap"
-      rel="stylesheet"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Black+Ops+One&family=Inter:wght@400;500;600;700&family=Oswald:wght@400;500;600;700&display=swap"
       rel="stylesheet"
     />
   </head>

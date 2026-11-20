@@ -127,6 +127,7 @@ const Contacts = ({ selectedBranch, onBranchChange }: ContactsProps) => {
                   rel="noopener noreferrer"
                   className="btn-social"
                   whileHover={{ scale: 1.1, y: -2 }}
+                  aria-label="Instagram"
                 >
                   <Instagram size={20} />
                 </motion.a>

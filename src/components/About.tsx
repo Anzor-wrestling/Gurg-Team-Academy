@@ -1,11 +1,11 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
-import coachImg1 from "@/assets/coach.jpg";
-import coachImg2 from "@/assets/coach-2.jpg";
-import coachImg3 from "@/assets/coach-3.jpg";
-import worldPoster from "@/assets/world-poster.jpg";
-import worldTeam from "@/assets/world-team.jpg";
-import worldMedals from "@/assets/world-medals.jpg";
+import coachImg1 from "@/assets/coach.webp";
+import coachImg2 from "@/assets/coach-2.webp";
+import coachImg3 from "@/assets/coach-3.webp";
+import worldPoster from "@/assets/world-poster.webp";
+import worldTeam from "@/assets/world-team.webp";
+import worldMedals from "@/assets/world-medals.webp";
 
 const coachImages = [coachImg1, coachImg2, coachImg3];
 

@@ -1,7 +1,7 @@
 import { motion } from "framer-motion";
 import { Instagram, Trophy } from "lucide-react";
 import { FaWhatsapp } from "react-icons/fa";
-import heroBg from "@/assets/hero-bg.jpg";
+import heroBg from "@/assets/hero-bg.webp";
 
 const Hero = () => {
   return (

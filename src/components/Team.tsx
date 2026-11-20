@@ -1,8 +1,8 @@
 import { motion } from "framer-motion";
-import student1 from "@/assets/student-1.jpg";
-import student2 from "@/assets/student-2.jpg";
-import student3 from "@/assets/student-3.jpg";
-import student4 from "@/assets/student-4.jpg";
+import student1 from "@/assets/student-1.webp";
+import student2 from "@/assets/student-2.webp";
+import student3 from "@/assets/student-3.webp";
+import student4 from "@/assets/student-4.webp";
 
 const students = [
   { 
@@ -83,6 +83,8 @@ const Team = () => {
                 <motion.img
                   src={student.image}
                   alt={student.name}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover"
                   whileHover={{ scale: 1.1 }}
                   transition={{ duration: 0.5 }}

@@ -1,10 +1,10 @@
 import { motion } from "framer-motion";
-import training1 from "@/assets/training-1.jpg";
-import training2 from "@/assets/training-2.jpg";
-import training3 from "@/assets/training-3.jpg";
-import training4 from "@/assets/training-4.jpg";
-import training5 from "@/assets/training-5.jpg";
-import training6 from "@/assets/training-6.jpg";
+import training1 from "@/assets/training-1.webp";
+import training2 from "@/assets/training-2.webp";
+import training3 from "@/assets/training-3.webp";
+import training4 from "@/assets/training-4.webp";
+import training5 from "@/assets/training-5.webp";
+import training6 from "@/assets/training-6.webp";
 
 const images = [
   { src: training1, alt: "" },
@@ -70,6 +70,8 @@ const Gallery = () => {
                 <img
                   src={image.src}
                   alt={image.alt}
+                  loading="lazy"
+                  decoding="async"
                   className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110"
                 />
                 
