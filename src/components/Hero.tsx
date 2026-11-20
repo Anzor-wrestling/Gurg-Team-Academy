@@ -21,7 +21,18 @@ const Hero = () => {
       </motion.div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-5 md:px-6 text-center">
+      <div className="relative z-10 container mx-auto px-5 md:px-6 pt-28 pb-28 md:py-0 text-left md:text-center">
+        {/* Champion badge */}
+        <motion.div
+          className="glass inline-flex items-center gap-2 rounded-full px-4 py-2 mb-5 font-heading text-xs md:text-sm uppercase tracking-[0.2em] text-secondary"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, delay: 0.1 }}
+        >
+          <Trophy size={16} />
+          Чемпион мира 2026
+        </motion.div>
+
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           animate={{ opacity: 1, y: 0 }}
