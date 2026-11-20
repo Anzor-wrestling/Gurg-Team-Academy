@@ -7,13 +7,15 @@ import Team from "@/components/Team";
 import Schedule from "@/components/Schedule";
 import Contacts from "@/components/Contacts";
 import Footer from "@/components/Footer";
-import MobileButton from "@/components/MobileButton";
+import Header from "@/components/Header";
+import BottomNav from "@/components/BottomNav";
 
 const Index = () => {
   const [selectedBranch, setSelectedBranch] = useState("kenesary");
 
   return (
-    <main className="min-h-screen bg-background">
+    <main className="min-h-screen bg-background pb-24 md:pb-0">
+      <Header />
       <Hero />
       <About />
       <Gallery />
@@ -22,7 +24,7 @@ const Index = () => {
       <Schedule selectedBranch={selectedBranch} onBranchChange={setSelectedBranch} />
       <Contacts selectedBranch={selectedBranch} onBranchChange={setSelectedBranch} />
       <Footer />
-      <MobileButton />
+      <BottomNav />
     </main>
   );
 };

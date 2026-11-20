@@ -13,10 +13,10 @@ const Contacts = ({ selectedBranch, onBranchChange }: ContactsProps) => {
   const activeBranch = branches.find((b) => b.id === selectedBranch) ?? branches[0];
 
   return (
-    <section id="contacts" className="py-24 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="contacts" className="py-14 md:py-24 bg-background">
+      <div className="container mx-auto px-5 md:px-6">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -32,7 +32,7 @@ const Contacts = ({ selectedBranch, onBranchChange }: ContactsProps) => {
 
         {/* Branch selector */}
         <motion.div
-          className="flex justify-center gap-4 mb-12"
+          className="glass rounded-2xl p-1 grid grid-cols-2 gap-1 max-w-md mx-auto mb-8 md:mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -42,10 +42,10 @@ const Contacts = ({ selectedBranch, onBranchChange }: ContactsProps) => {
             <button
               key={branch.id}
               onClick={() => onBranchChange?.(branch.id)}
-              className={`px-6 py-3 font-heading uppercase tracking-wider text-sm md:text-base transition-all duration-300 border-2 ${
+              className={`h-11 rounded-xl font-heading uppercase tracking-wider text-sm md:text-base transition-all duration-300 ${
                 selectedBranch === branch.id
-                  ? "bg-primary border-primary text-primary-foreground"
-                  : "bg-transparent border-muted-foreground/30 text-muted-foreground hover:border-primary hover:text-primary"
+                  ? "bg-primary text-primary-foreground shadow-[0_0_20px_hsl(0_85%_50%/0.35)]"
+                  : "bg-transparent text-muted-foreground hover:text-foreground"
               }`}
             >
               {branch.name}
@@ -53,10 +53,10 @@ const Contacts = ({ selectedBranch, onBranchChange }: ContactsProps) => {
           ))}
         </motion.div>
 
-        <div className="grid md:grid-cols-2 gap-12">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-12">
           {/* Info */}
           <motion.div
-            className="space-y-8"
+            className="glass rounded-3xl p-5 md:p-8 space-y-6 md:space-y-8"
             initial={{ opacity: 0, x: -30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -93,11 +93,15 @@ const Contacts = ({ selectedBranch, onBranchChange }: ContactsProps) => {
             </div>
 
             <div className="flex items-start gap-4">
+              <div className="btn-social shrink-0">
+                <Phone size={20} />
+              </div>
               <div>
                 <h3 className="font-heading text-lg uppercase text-foreground mb-1">Телефон</h3>
-                <a >
+                <a href="tel:+77073843775" className="block text-muted-foreground hover:text-primary transition-colors">
                   +7 (707) 384-37-75
-                  <br />
+                </a>
+                <a href="tel:+77009000498" className="block text-muted-foreground hover:text-primary transition-colors">
                   +7 (700) 900-04-98
                 </a>
               </div>
@@ -134,7 +138,7 @@ const Contacts = ({ selectedBranch, onBranchChange }: ContactsProps) => {
           {/* Map */}
           <motion.div
             key={activeBranch.id + "-map"}
-            className="relative h-[400px] overflow-hidden"
+            className="relative h-[320px] md:h-[400px] overflow-hidden rounded-3xl"
             initial={{ opacity: 0, x: 30 }}
             whileInView={{ opacity: 1, x: 0 }}
             viewport={{ once: true }}
@@ -148,7 +152,7 @@ const Contacts = ({ selectedBranch, onBranchChange }: ContactsProps) => {
               referrerPolicy="no-referrer-when-downgrade"
               title="Карта"
             />
-            <div className="absolute inset-0 border border-border pointer-events-none" />
+            <div className="absolute inset-0 border border-border rounded-3xl pointer-events-none" />
           </motion.div>
         </div>
       </div>

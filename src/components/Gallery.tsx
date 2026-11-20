@@ -31,10 +31,10 @@ const item = {
 
 const Gallery = () => {
   return (
-    <section id="gallery" className="py-24 bg-background">
-      <div className="container mx-auto px-6">
+    <section id="gallery" className="py-14 md:py-24 bg-background">
+      <div className="container mx-auto px-5 md:px-6">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -49,7 +49,7 @@ const Gallery = () => {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-3 gap-4"
+          className="grid grid-cols-2 md:grid-cols-3 gap-3 md:gap-4"
           variants={container}
           initial="hidden"
           whileInView="visible"
@@ -58,7 +58,7 @@ const Gallery = () => {
           {images.map((image, index) => (
             <motion.div
               key={index}
-              className="relative overflow-hidden group cursor-pointer"
+              className="relative overflow-hidden rounded-2xl group cursor-pointer"
               variants={item}
               transition={{ duration: 0.5 }}
             >

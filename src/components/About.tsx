@@ -3,6 +3,9 @@ import { useState, useEffect } from "react";
 import coachImg1 from "@/assets/coach.jpg";
 import coachImg2 from "@/assets/coach-2.jpg";
 import coachImg3 from "@/assets/coach-3.jpg";
+import worldPoster from "@/assets/world-poster.jpg";
+import worldTeam from "@/assets/world-team.jpg";
+import worldMedals from "@/assets/world-medals.jpg";
 
 const coachImages = [coachImg1, coachImg2, coachImg3];
 
@@ -27,9 +30,9 @@ const About = () => {
   }, []);
 
   return (
-    <section id="about" className="py-24 bg-card">
-      <div className="container mx-auto px-6">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
+    <section id="about" className="py-14 md:py-24 bg-card">
+      <div className="container mx-auto px-5 md:px-6">
+        <div className="grid md:grid-cols-2 gap-8 md:gap-12 items-center">
           {/* Photo Carousel */}
           <motion.div
             className="relative"
@@ -39,13 +42,13 @@ const About = () => {
             viewport={{ once: true, amount: 0.3 }}
             transition={{ duration: 0.8 }}
           >
-            <div className="relative overflow-hidden h-[600px]">
+            <div className="relative overflow-hidden rounded-3xl h-[460px] md:h-[600px]">
               <AnimatePresence mode="wait">
                 <motion.img
                   key={currentImage}
                   src={coachImages[currentImage]}
                   alt="Тренер по боевым искусствам"
-                  className="w-full h-[600px] object-cover object-top absolute inset-0"
+                  className="w-full h-full object-cover object-top absolute inset-0"
                   initial={{ opacity: 0, scale: 1.1 }}
                   animate={{ opacity: 1, scale: 1 }}
                   exit={{ opacity: 0, scale: 0.95 }}
@@ -55,7 +58,7 @@ const About = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-background/50 to-transparent" />
             </div>
             {/* Red accent line */}
-            <div className="absolute -bottom-4 -right-4 w-32 h-32 border-r-4 border-b-4 border-primary" />
+            <div className="hidden md:block absolute -bottom-4 -right-4 w-32 h-32 border-r-4 border-b-4 border-primary rounded-br-3xl" />
             
             {/* Carousel indicators */}
             <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
@@ -84,10 +87,20 @@ const About = () => {
               О <span className="gradient-text-red">Тренере</span>
             </h2>
             
-            <div className="space-y-4 text-muted-foreground text-lg leading-relaxed">
+            <div className="space-y-4 text-muted-foreground text-base md:text-lg leading-relaxed">
               <p>
-                <strong className="text-foreground">Более 11 лет опыта</strong> работы тренером в сфере боевых искусств и подготовки спортсменов. <br /> <strong className="text-foreground">Раджабов Анзор Имомалиевич - </strong>основатель академии смешанных единоборств Gurg Team Academy, призер чемпионата мира по ARASHI MMA, президент Федерации ARASHI MMA и обладатель черного пояса. Мастер спорта по вольной борьбе, тренер международного уровня, кандидат в мастера спорта по самбо, выпускник олимпийского резерва.
+                <strong className="text-foreground">Более 11 лет опыта</strong> работы тренером в сфере боевых искусств и подготовки спортсменов. <br /> <strong className="text-foreground">Раджабов Анзор Имомалиевич - </strong><strong className="text-foreground">Чемпион мира 2026</strong>, основатель академии смешанных единоборств Gurg Team Academy, президент Федерации ARASHI MMA и обладатель черного пояса. Мастер спорта по вольной борьбе, тренер международного уровня, кандидат в мастера спорта по самбо, выпускник олимпийского резерва.
               </p>
+              <ul className="space-y-2">
+                <li className="glass rounded-2xl px-4 py-3 flex items-center gap-3 text-foreground font-medium text-base">
+                  <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+                  Руководитель ARASHI MMA по Центральной Азии
+                </li>
+                <li className="glass rounded-2xl px-4 py-3 flex items-center gap-3 text-foreground font-medium text-base">
+                  <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
+                  Исполнительный член Международной федерации ARASHI-MMA
+                </li>
+              </ul>
               <p>
                 <strong className="text-foreground">Дисциплина и характер</strong> - основа моей философии. Я не просто обучаю технике, я формирую личность, способную преодолевать любые трудности.
               </p>
@@ -113,6 +126,47 @@ const About = () => {
             </motion.div>
           </motion.div>
         </div>
+
+        {/* World Championship 2026 */}
+        <motion.div
+          className="mt-12 md:mt-20 rounded-3xl p-4 md:p-8 border border-secondary/30 bg-secondary/5"
+          initial={{ opacity: 0, y: 30 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true, amount: 0.15 }}
+          transition={{ duration: 0.7 }}
+        >
+          <div className="flex items-baseline justify-between gap-4 mb-4 md:mb-6">
+            <h3 className="font-heading text-2xl md:text-4xl uppercase tracking-wider gradient-text-gold">
+              Чемпионат мира 2026
+            </h3>
+            <span className="text-muted-foreground text-xs md:text-sm shrink-0">Arashi MMA</span>
+          </div>
+          <div className="grid md:grid-cols-[1fr_1fr] gap-3 md:gap-6">
+            <img
+              src={worldPoster}
+              alt="Анзор Раджабов — чемпион мира Arashi MMA 2026"
+              loading="lazy"
+              className="w-full rounded-2xl bg-black object-contain"
+            />
+            <div className="grid grid-cols-2 md:grid-cols-1 gap-3 md:gap-6">
+              <img
+                src={worldTeam}
+                alt="Тренер и ученики Gurg Team на 3rd World Arashi MMA Championship 2026"
+                loading="lazy"
+                className="w-full h-48 md:h-full md:max-h-[420px] rounded-2xl object-cover"
+              />
+              <img
+                src={worldMedals}
+                alt="Медали чемпионата мира Arashi MMA 2026"
+                loading="lazy"
+                className="w-full h-48 md:h-full md:max-h-[420px] rounded-2xl object-cover object-[center_30%]"
+              />
+            </div>
+          </div>
+          <p className="mt-4 text-muted-foreground text-sm md:text-base">
+            3rd World Arashi MMA Championship 2026 — тренер и ученики Gurg Team Academy с медалями чемпионата мира.
+          </p>
+        </motion.div>
       </div>
     </section>
   );

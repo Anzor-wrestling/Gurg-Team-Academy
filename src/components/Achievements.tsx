@@ -59,10 +59,10 @@ const Achievements = () => {
   const isInView = useInView(ref, { once: true, amount: 0.3 });
 
   return (
-    <section id="achievements" className="py-24 bg-card" ref={ref}>
-      <div className="container mx-auto px-6">
+    <section id="achievements" className="py-14 md:py-24 bg-card" ref={ref}>
+      <div className="container mx-auto px-5 md:px-6">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -77,7 +77,7 @@ const Achievements = () => {
         </motion.div>
 
         <motion.div
-          className="grid grid-cols-2 md:grid-cols-4 gap-6"
+          className="grid grid-cols-2 md:grid-cols-4 gap-3 md:gap-6"
           variants={container}
           initial="hidden"
           whileInView="visible"
@@ -91,7 +91,7 @@ const Achievements = () => {
               transition={{ duration: 0.5 }}
             >
               <motion.div
-                className="mb-4 flex justify-center"
+                className="mb-3 md:mb-4 flex justify-center"
                 animate={isInView ? { scale: [1, 1.1, 1] } : {}}
                 transition={{ 
                   duration: 2, 
@@ -100,7 +100,7 @@ const Achievements = () => {
                   delay: index * 0.2 
                 }}
               >
-                <stat.icon className="w-10 h-10 text-secondary" />
+                <stat.icon className="w-8 h-8 md:w-10 md:h-10 text-secondary" />
               </motion.div>
               <CounterAnimation value={stat.value} suffix={stat.suffix} shouldStart={isInView} />
               <p className="text-muted-foreground mt-2 uppercase tracking-wider font-heading text-sm">

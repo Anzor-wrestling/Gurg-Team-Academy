@@ -62,10 +62,10 @@ const Schedule = ({ selectedBranch, onBranchChange }: ScheduleProps) => {
   const activeBranch = branches.find((b) => b.id === activeBranchId) ?? branches[0];
 
   return (
-    <section id="schedule" className="py-24 bg-card">
-      <div className="container mx-auto px-6">
+    <section id="schedule" className="py-14 md:py-24 bg-card">
+      <div className="container mx-auto px-5 md:px-6">
         <motion.div
-          className="text-center mb-16"
+          className="text-center mb-10 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -77,9 +77,9 @@ const Schedule = ({ selectedBranch, onBranchChange }: ScheduleProps) => {
           <p className="section-subheading mx-auto">Выбери удобное время для тренировок</p>
         </motion.div>
 
-        {/* Branch selector */}
+        {/* Branch selector — glass segmented control */}
         <motion.div
-          className="flex justify-center gap-4 mb-12"
+          className="glass rounded-2xl p-1 grid grid-cols-2 gap-1 max-w-md mx-auto mb-8 md:mb-12"
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
@@ -89,10 +89,10 @@ const Schedule = ({ selectedBranch, onBranchChange }: ScheduleProps) => {
             <button
               key={branch.id}
               onClick={() => setActiveBranch(branch.id)}
-              className={`px-6 py-3 font-heading uppercase tracking-wider text-sm md:text-base transition-all duration-300 border-2 ${
+              className={`h-11 rounded-xl font-heading uppercase tracking-wider text-sm md:text-base transition-all duration-300 ${
                 activeBranchId === branch.id
-                  ? "bg-primary border-primary text-primary-foreground"
-                  : "bg-transparent border-muted-foreground/30 text-muted-foreground hover:border-primary hover:text-primary"
+                  ? "bg-primary text-primary-foreground shadow-[0_0_20px_hsl(0_85%_50%/0.35)]"
+                  : "bg-transparent text-muted-foreground hover:text-foreground"
               }`}
             >
               {branch.name}
@@ -108,38 +108,42 @@ const Schedule = ({ selectedBranch, onBranchChange }: ScheduleProps) => {
           transition={{ duration: 0.6, delay: 0.2 }}
         >
           {/* Header */}
-          <div className="grid grid-cols-4 gap-4 pb-4 border-b-2 border-primary mb-4">
+          <div className="hidden md:grid grid-cols-4 gap-4 pb-4 border-b-2 border-primary mb-4">
             <span className="font-heading uppercase tracking-wider text-primary text-sm md:text-base">День</span>
             <span className="font-heading uppercase tracking-wider text-primary text-sm md:text-base">Время</span>
             <span className="font-heading uppercase tracking-wider text-primary text-sm md:text-base">Группа</span>
             <span className="font-heading uppercase tracking-wider text-primary text-sm md:text-base">Возраст</span>
           </div>
 
-          {/* Rows */}
-          <motion.div key={activeBranchId} variants={container} initial="hidden" animate="visible">
+          {/* Rows: cards on mobile, table on desktop */}
+          <motion.div key={activeBranchId} className="flex flex-col gap-2 md:block" variants={container} initial="hidden" animate="visible">
             {activeBranch.schedule.map((row, index) => (
               <motion.div
                 key={index}
-                className="schedule-row grid grid-cols-4 gap-4"
+                className="glass rounded-2xl px-4 py-3 flex items-center justify-between md:rounded-none md:bg-transparent md:border-0 md:border-b md:border-border md:backdrop-blur-none md:px-0 md:py-4 md:grid md:grid-cols-4 md:gap-4 md:hover:bg-muted transition-colors"
                 variants={item}
                 transition={{ duration: 0.4 }}
               >
-                <span className="font-heading text-foreground text-sm md:text-base">{row.day}</span>
-                <span className="text-muted-foreground text-sm md:text-base">{row.time}</span>
-                <span className="text-foreground text-sm md:text-base">{row.group}</span>
-                <span className="text-muted-foreground text-sm md:text-base">{row.age}</span>
+                <div className="flex flex-col md:contents">
+                  <span className="font-heading text-foreground text-lg md:text-base md:order-2 md:font-body md:text-muted-foreground">{row.time}</span>
+                  <span className="text-muted-foreground text-xs md:text-base md:order-1 md:font-heading md:text-foreground">{row.day}</span>
+                </div>
+                <div className="flex flex-col items-end md:contents">
+                  <span className="text-foreground text-sm font-medium md:text-base md:font-normal md:order-3">{row.group}</span>
+                  <span className="text-secondary text-xs md:text-base md:text-muted-foreground md:order-4">{row.age}</span>
+                </div>
               </motion.div>
             ))}
           </motion.div>
         </motion.div>
 
         {/* Yandex Map */}
-        <div className="max-w-4xl mx-auto mt-10">
+        <div className="max-w-4xl mx-auto mt-8 md:mt-10 rounded-2xl overflow-hidden border border-border">
           <iframe
             key={activeBranchId}
             src={activeBranch.mapUrl}
             width="100%"
-            height="400"
+            height="340"
             frameBorder={0}
             style={{ border: 0 }}
             allowFullScreen
