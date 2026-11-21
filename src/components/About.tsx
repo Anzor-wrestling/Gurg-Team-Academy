@@ -94,7 +94,7 @@ const About = () => {
               <ul className="space-y-2">
                 <li className="glass rounded-2xl px-4 py-3 flex items-center gap-3 text-foreground font-medium text-base">
                   <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
-                  Руководитель ARASHI MMA по Центральной Азии
+                  Президент Федерации ARASHI MMA по Центральной Азии
                 </li>
                 <li className="glass rounded-2xl px-4 py-3 flex items-center gap-3 text-foreground font-medium text-base">
                   <span className="w-2 h-2 rounded-full bg-primary shrink-0" />
