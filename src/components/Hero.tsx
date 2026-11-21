@@ -97,7 +97,7 @@ const Hero = () => {
   <FaWhatsapp size={24} />
 </a>
           <a
-            href="https://instagram.com/gurg_team"
+            href="https://www.instagram.com/anzor_coach_kz/"
             target="_blank"
             rel="noopener noreferrer"
             className="btn-social"

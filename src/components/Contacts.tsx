@@ -122,7 +122,7 @@ const Contacts = ({ selectedBranch, onBranchChange }: ContactsProps) => {
   <FaWhatsapp size={20} />
 </motion.a>
                 <motion.a
-                  href="https://instagram.com/gurg_team"
+                  href="https://www.instagram.com/anzor_coach_kz/"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="btn-social"
