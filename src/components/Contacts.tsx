@@ -57,8 +57,8 @@ const Contacts = ({ selectedBranch, onBranchChange }: ContactsProps) => {
           {/* Info */}
           <motion.div
             className="glass rounded-3xl p-5 md:p-8 space-y-6 md:space-y-8"
-            initial={{ opacity: 0, x: -30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
@@ -140,8 +140,8 @@ const Contacts = ({ selectedBranch, onBranchChange }: ContactsProps) => {
           <motion.div
             key={activeBranch.id + "-map"}
             className="relative h-[320px] md:h-[400px] overflow-hidden rounded-3xl"
-            initial={{ opacity: 0, x: 30 }}
-            whileInView={{ opacity: 1, x: 0 }}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >

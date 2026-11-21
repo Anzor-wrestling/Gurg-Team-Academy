@@ -10,13 +10,13 @@ import worldMedals from "@/assets/world-medals.webp";
 const coachImages = [coachImg1, coachImg2, coachImg3];
 
 const fadeInLeft = {
-  hidden: { opacity: 0, x: -50, filter: "blur(10px)" },
-  visible: { opacity: 1, x: 0, filter: "blur(0px)" },
+  hidden: { opacity: 0, y: 40, filter: "blur(10px)" },
+  visible: { opacity: 1, y: 0, filter: "blur(0px)" },
 };
 
 const fadeInRight = {
-  hidden: { opacity: 0, x: 50, filter: "blur(10px)" },
-  visible: { opacity: 1, x: 0, filter: "blur(0px)" },
+  hidden: { opacity: 0, y: 40, filter: "blur(10px)" },
+  visible: { opacity: 1, y: 0, filter: "blur(0px)" },
 };
 
 const About = () => {
