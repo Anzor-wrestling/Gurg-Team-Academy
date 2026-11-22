@@ -30,3 +30,11 @@ jobs:
           publish_dir: ./dist
           publish_branch: gh-pages
           cname: gurgteam.asia
+      - name: Notify Yandex and Bing (IndexNow)
+        continue-on-error: true
+        run: |
+          sleep 60
+          curl -sS -X POST https://yandex.com/indexnow -H "Content-Type: application/json" \
+            -d '{"host":"gurgteam.asia","key":"19737bdc5de13e283c8af91d6b939623","keyLocation":"https://gurgteam.asia/19737bdc5de13e283c8af91d6b939623.txt","urlList":["https://gurgteam.asia/"]}' -w " yandex %{http_code}\n"
+          curl -sS -X POST https://api.indexnow.org/indexnow -H "Content-Type: application/json" \
+            -d '{"host":"gurgteam.asia","key":"19737bdc5de13e283c8af91d6b939623","keyLocation":"https://gurgteam.asia/19737bdc5de13e283c8af91d6b939623.txt","urlList":["https://gurgteam.asia/"]}' -w " indexnow %{http_code}\n"
