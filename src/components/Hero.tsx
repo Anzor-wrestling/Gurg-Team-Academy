@@ -80,7 +80,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.8 }}
         >
           <a
-            href="https://wa.me/77073843775?text=Здравствуйте!%20Хочу%20записаться%20на%20пробную%20тренировку."
+            href="https://wa.me/77009000498?text=Здравствуйте!%20Хочу%20записаться%20на%20пробную%20тренировку."
             target="_blank"
             rel="noopener noreferrer"
             className="btn-hero flex-1 md:flex-none h-14 px-4 md:px-8 rounded-2xl font-heading text-[15px] sm:text-base"
@@ -88,7 +88,7 @@ const Hero = () => {
             Записаться на пробную
           </a>
           <a
-  href="https://wa.me/77073843775"
+  href="https://wa.me/77009000498"
   target="_blank"
   rel="noopener noreferrer"
   className="btn-social hidden md:inline-flex"

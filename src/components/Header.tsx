@@ -49,7 +49,7 @@ const Header = () => {
         </nav>
 
         <a
-          href="https://wa.me/77073843775"
+          href="https://wa.me/77009000498"
           target="_blank"
           rel="noopener noreferrer"
           aria-label="Написать в WhatsApp"
