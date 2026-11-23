@@ -1,11 +1,12 @@
 import { motion, AnimatePresence } from "framer-motion";
 import { useState, useEffect } from "react";
+import coachSuit from "@/assets/coach-2.webp";
 import coachProfile from "@/assets/coach-profile.webp";
 import worldPoster from "@/assets/world-poster.webp";
 import worldTeam from "@/assets/world-team.webp";
 import worldMedals from "@/assets/world-medals.webp";
 
-const coachImages = [worldMedals, coachProfile, worldTeam];
+const coachImages = [coachSuit, coachProfile, worldTeam];
 
 const fadeInLeft = {
   hidden: { opacity: 0, y: 40, filter: "blur(10px)" },
